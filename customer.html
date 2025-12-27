@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>ChurnGuard - Detect & Retain Customer Churn</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="customer.css" />
+</head>
+<body>
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+  <div>
+    <div class="logo">ChurnGuard</div>
+
+    <div class="menu-section">
+      <div class="menu-title">Main Menu</div>
+     <a href="dashboard.html"><div class="menu-item">📊 Dashboard</div></a> 
+      <div class="menu-item active customer_btn">👥 Customers</div>
+      <a href="reports.html"><div class="menu-item">📄 Reports</div></a>
+      <a href="analytics.html"><div class="menu-item">📈 Analytics</div></a>
+    </div>
+
+    <div class="menu-section">
+      <br>
+      <div class="menu-title">Administration</div>
+       <a href="settings.html"><div class="menu-item">⚙️ Settings</div></a>
+      <a href="admin_panel.html"><div class="menu-item"><span>🔒</span> Admin Panel</div></a>
+    </div>
+  </div>
+
+  <div class="user-section">
+    <div class="user-avatar">AD</div>
+    <div class="user-info">
+      <div class="user-name">Admin User</div>
+      <div class="user-email" style="color: #94a3b8;">admin@bank.com</div>
+    </div>
+    <a href="index.html"><div class="logout" style="color:#94a3b8;">Logout ➜</div></a>
+  </div>
+</aside>
+
+<!-- MAIN CONTENT -->
+<main class="main-content">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div>
+      <div class="title">Customers</div>
+      <div class="subtitle">Manage and analyze customer churn risk</div>
+    </div>
+  </div>
+
+  <!-- STATS -->
+  <section class="stats">
+    <div class="stat-card"><span>Total Customers</span><strong>10</strong></div>
+    <div class="stat-card danger"><span>High Risk</span><strong>4</strong></div>
+    <div class="stat-card"><span>Total LTV</span><strong>$410K</strong></div>
+    <div class="stat-card"><span>Avg Engagement</span><strong>61%</strong></div>
+  </section>
+
+  <!-- CUSTOMERS -->
+  <section class="customers">
+
+    <!-- Example customer with actions -->
+    <div class="customer high">
+      <div class="top">
+        <div class="left">
+          <div class="avatar-circle">SJ</div>
+          <div>
+            <h3>Sarah Johnson <span class="risk high">High</span></h3>
+            <p>sarah.j@email.com • +1 555-0123</p>
+          </div>
+        </div>
+        <div class="actions">
+          <button class="btn-edit" title="Edit">✏️</button>
+          <button class="btn-delete" title="Delete">🗑️</button>
+        </div>
+      </div>
+      
+      <div class="details">
+        <span>Balance: $45,230</span>
+        <span>Risk: 87%</span>
+        <span>Engagement: 23%</span>
+      </div>
+    </div>
+
+    <div class="customer medium">
+      <div class="top">
+        <div class="left">
+          <div class="avatar-circle">MC</div>
+          <div>
+            <h3>Michael Chen <span class="risk medium" style="color: white;">Medium</span></h3>
+            <p>m.chen@email.com • +1 555-0124</p>
+          </div>
+        </div>
+        <div class="actions">
+          <button class="btn-edit" title="Edit">✏️</button>
+          <button class="btn-delete" title="Delete">🗑️</button>
+        </div>
+      </div>
+      <div class="details">
+        <span>Balance: $128,500</span>
+        <span>Risk: 56%</span>
+        <span>Engagement: 58%</span>
+      </div>
+    </div>
+
+    <!-- Repeat the same pattern for all customers -->
+    <div class="customer high">
+      <div class="top">
+        <div class="left">
+          <div class="avatar-circle">ED</div>
+          <div>
+            <h3>Emily Davis <span class="risk high">High</span></h3>
+            <p>emily.d@email.com • +1 555-0125</p>
+          </div>
+        </div>
+        <div class="actions">
+          <button class="btn-edit" title="Edit">✏️</button>
+          <button class="btn-delete" title="Delete">🗑️</button>
+        </div>
+      </div>
+      <div class="details">
+        <span>Balance: $12,890</span>
+        <span>Risk: 92%</span>
+        <span>Engagement: 15%</span>
+      </div>
+    </div>
+
+    <div class="customer low">
+      <div class="top">
+        <div class="left">
+          <div class="avatar-circle">JW</div>
+          <div>
+            <h3>James Wilson <span class="risk low">Low</span></h3>
+            <p>j.wilson@email.com • +1 555-0126</p>
+          </div>
+        </div>
+        <div class="actions">
+          <button class="btn-edit" title="Edit">✏️</button>
+          <button class="btn-delete" title="Delete">🗑️</button>
+        </div>
+      </div>
+      <div class="details">
+        <span>Balance: $78,450</span>
+        <span>Risk: 15%</span>
+        <span>Engagement: 92%</span>
+      </div>
+    </div>
+
+    <div class="customer medium">
+      <div class="top">
+        <div class="left">
+          <div class="avatar-circle">LA</div>
+          <div>
+            <h3>Lisa Anderson <span class="risk medium" style="color: white;">Medium</span></h3>
+            <p>l.anderson@email.com • +1 555-0127</p>
+          </div>
+        </div>
+        <div class="actions">
+          <button class="btn-edit" title="Edit">✏️</button>
+          <button class="btn-delete" title="Delete">🗑️</button>
+        </div>
+      </div>
+      <div class="details">
+        <span>Balance: $234,100</span>
+        <span>Risk: 48%</span>
+        <span>Engagement: 67%</span>
+      </div>
+    </div>
+
+    <div class="customer low">
+      <div class="top">
+        <div class="left">
+          <div class="avatar-circle">DB</div>
+          <div>
+            <h3>David Brown <span class="risk low">Low</span></h3>
+            <p>d.brown@email.com • +1 555-0130</p>
+          </div>
+        </div>
+        <div class="actions">
+          <button class="btn-edit" title="Edit">✏️</button>
+          <button class="btn-delete" title="Delete">🗑️</button>
+        </div>
+      </div>
+      <div class="details">
+        <span>Balance: $312,800</span>
+        <span>Risk: 8%</span>
+        <span>Engagement: 95%</span>
+      </div>
+    </div>
+
+    <div class="customer medium">
+      <div class="top">
+        <div class="left">
+          <div class="avatar-circle">AR</div>
+          <div>
+            <h3>Ahmed Raza <span class="risk medium" style="color: white;">Medium</span></h3>
+            <p>a.raza@bank.com</p>
+          </div>
+        </div>
+        <div class="actions">
+          <button class="btn-edit" title="Edit">✏️</button>
+          <button class="btn-delete" title="Delete">🗑️</button>
+        </div>
+      </div>
+      <div class="details">
+        <span>Balance: $90,400</span>
+        <span>Risk: 52%</span>
+        <span>Engagement: 61%</span>
+      </div>
+    </div>
+
+    <div class="customer high">
+      <div class="top">
+        <div class="left">
+          <div class="avatar-circle">SK</div>
+          <div>
+            <h3>Sana Khan <span class="risk high">High</span></h3>
+            <p>s.khan@bank.com</p>
+          </div>
+        </div>
+        <div class="actions">
+          <button class="btn-edit" title="Edit">✏️</button>
+          <button class="btn-delete" title="Delete">🗑️</button>
+        </div>
+      </div>
+      <div class="details">
+        <span>Balance: $18,300</span>
+        <span>Risk: 89%</span>
+        <span>Engagement: 21%</span>
+      </div>
+    </div>
+
+    <div class="customer low">
+      <div class="top">
+        <div class="left">
+          <div class="avatar-circle">HR</div>
+          <div>
+            <h3>Hassan Rauf <span class="risk low">Low</span></h3>
+            <p>h.rauf@bank.com</p>
+          </div>
+        </div>
+        <div class="actions">
+          <button class="btn-edit" title="Edit">✏️</button>
+          <button class="btn-delete" title="Delete">🗑️</button>
+        </div>
+      </div>
+      <div class="details">
+        <span>Balance: $150,900</span>
+        <span>Risk: 12%</span>
+        <span>Engagement: 88%</span>
+      </div>
+    </div>
+
+    <div class="customer medium">
+      <div class="top">
+        <div class="left">
+          <div class="avatar-circle">NK</div>
+          <div>
+            <h3>Noor Kamal <span class="risk medium" style="color: white;">Medium</span></h3>
+            <p>n.kamal@bank.com</p>
+          </div>
+        </div>
+        <div class="actions">
+          <button class="btn-edit" title="Edit">✏️</button>
+          <button class="btn-delete" title="Delete">🗑️</button>
+        </div>
+      </div>
+      <div class="details">
+        <span>Balance: $66,200</span>
+        <span>Risk: 44%</span>
+        <span>Engagement: 63%</span>
+      </div>
+    </div>
+
+    <div class="customer high">
+      <div class="top">
+        <div class="left">
+          <div class="avatar-circle">FA</div>
+          <div>
+            <h3>Faisal Ahmed <span class="risk high">High</span></h3>
+            <p>f.ahmed@bank.com</p>
+          </div>
+        </div>
+        <div class="actions">
+          <button class="btn-edit" title="Edit">✏️</button>
+          <button class="btn-delete" title="Delete">🗑️</button>
+        </div>
+      </div>
+      <div class="details">
+        <span>Balance: $9,800</span>
+        <span>Risk: 94%</span>
+        <span>Engagement: 12%</span>
+      </div>
+    </div>
+
+  </section>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChurnGuard - Admin Panel</title>
+    <link rel="stylesheet" href="admin_panel.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <div>
+            <div class="logo">
+                <span></span> ChurnGuard
+            </div>
+
+            <div class="menu-title">MAIN MENU</div>
+            <a href="dashboard.html" class="menu-item"><span class="icon">📊</span> Dashboard</a>
+            <a href="customer.html" class="menu-item"><span class="icon">👥</span> Customers</a>
+            <a href="reports.html" class="menu-item"><span class="icon">📄</span> Reports</a>
+            <a href="analytics.html" class="menu-item"><span class="icon">📈</span> Analytics</a>
+
+            <div class="menu-title">ADMINISTRATION</div>
+            <a href="settings.html" class="menu-item"><span class="icon">⚙️</span> Settings</a>
+           <a href="admin_panel.html" class="menu-item active"><span class="icon">🔒</span> Admin Panel</a>
+        </div>
+
+        <div class="user-section">
+            <div class="user-avatar">AD</div>
+            <div class="user-info">
+                <div class="user-name">Admin User</div>
+                <div class="user-email">admin@bank.com</div>
+            </div>
+            <a href="index.html" style="text-decoration: none;"><div class="logout">Logout →</div></a>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <div class="header">
+            <div>
+                <h1 class="section-title">Admin Panel</h1>
+                <p class="subtitle">System configuration, user management & monitoring</p>
+            </div>
+            <div class="header-actions">
+                <span class="status-badge healthy">● System Healthy</span>
+                <button class="btn-sync" style="color: white; background-color: transparent;">↻ Sync</button>
+            </div>
+        </div>
+
+        <!-- Stats Cards -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">👤</div>
+                <div class="stat-info">
+                    <h3>Total Users</h3>
+                    <div class="stat-value">24</div>
+                    <span class="stat-change positive">+3 this week</span>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">🛡️</div>
+                <div class="stat-info">
+                    <h3>Active Sessions</h3>
+                    <div class="stat-value">18</div>
+                    <span class="stat-change">75% active</span>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">🗄️</div>
+                <div class="stat-info">
+                    <h3>Data Points</h3>
+                    <div class="stat-value">2.4M</div>
+                    <span class="stat-change positive">+125K today</span>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">🔔</div>
+                <div class="stat-info">
+                    <h3>Alerts Today</h3>
+                    <div class="stat-value">47</div>
+                    <span class="stat-change critical">12 critical</span>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">⚡</div>
+                <div class="stat-info">
+                    <h3>API Calls</h3>
+                    <div class="stat-value">89K</div>
+                    <span class="stat-change">Last 24h</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- System Health Monitor -->
+        <div class="health-section">
+            <div class="health-header">
+                <h2 class="card-title" style="color: white;">System Health Monitor</h2>
+                <span class="updated" style="color: white;">Updated 30s ago</span>
+            </div>
+            <br>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-name">API Server</div>
+                    <div class="status ok">✓</div>
+                    <div class="metrics">
+                        <span>Uptime <strong>99.99%</strong></span>
+                        <span>Latency 23ms</span>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-name">Database</div>
+                    <div class="status ok">✓</div>
+                    <div class="metrics">
+                        <span>Uptime <strong>99.98%</strong></span>
+                        <span>Latency <strong>12ms</strong></span>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-name">ML Engine</div>
+                    <div class="status ok">✓</div>
+                    <div class="metrics">
+                        <span>Uptime <strong>99.95%</strong></span>
+                        <span>Latency <strong>156ms</strong></span>
+                    </div>
+                </div>
+                <div class="service-card warning">
+                    <div class="service-name">Cache Layer</div>
+                    <div class="status warn">⚠</div>
+                    <div class="metrics">
+                        <span>Uptime <strong>98.50%</strong></span>
+                        <span>Latency <strong>8ms</strong></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="resource-grid">
+                <div class="resource-card">
+                    <div class="resource-icon">🖥️</div>
+                    <h3>CPU Usage</h3>
+                    <div class="resource-value">34%</div>
+                    <div class="progress-bar"><div class="progress-fill" style="width: 34%;"></div></div>
+                    <span class="resource-status normal">Normal</span>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-icon">💾</div>
+                    <h3>Memory Usage</h3>
+                    <div class="resource-value">67%</div>
+                    <div class="progress-bar"><div class="progress-fill moderate" style="width: 67%;"></div></div>
+                    <span class="resource-status moderate">Moderate</span>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-icon">🗃️</div>
+                    <h3>Storage</h3>
+                    <div class="resource-value">45%</div>
+                    <div class="progress-bar"><div class="progress-fill" style="width: 45%;"></div></div>
+                    <span class="resource-status healthy">Healthy</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- User Management & Roles -->
+        <div class="management-grid">
+            <div class="user-management">
+                <div class="section-header">
+                    <h2 class="card-title">User Management</h2>
+                    <button class="btn-primary">+ Add User</button>
+                </div>
+                <div class="user-list">
+                    <div class="user-item">
+                        <div class="user-avatar small">MA</div>
+                        <div class="user-details">
+                            <strong>Muneeb Anjum</strong><br>
+                            <span>muneeb@gmail.com</span>
+                        </div>
+                        <div class="user-role">Manager Administration</div>
+                        <div class="user-last">2 min ago</div>
+                        <span class="status-badge active">Active</span>
+                    </div>
+                    <div class="user-item">
+                        <div class="user-avatar small">AC</div>
+                        <div class="user-details">
+                            <strong>Ayyan Chohan </strong><br>
+                            <span>chohan@gmail.com</span>
+                        </div>
+                        <div class="user-role">IT Manager</div>
+                        <div class="user-last">1 hour ago</div>
+                        <span class="status-badge active">Active</span>
+                    </div>
+                    <div class="user-item">
+                        <div class="user-avatar small">SA</div>
+                        <div class="user-details">
+                            <strong>Umair Naeem</strong><br>
+                            <span>umair@gmail.com</span>
+                        </div>
+                        <div class="user-role">Data Analyst</div>
+                        <div class="user-last">3 hours ago</div>
+                        <span class="status-badge active">Active</span>
+                    </div>
+                    <div class="user-item">
+                        <div class="user-avatar small">MS</div>
+                        <div class="user-details">
+                            <strong>Umar Wariach</strong><br>
+                            <span>umar@gmail.com</span>
+                        </div>
+                        <div class="user-role">Manager Procurement</div>
+                        <div class="user-last">2 days ago</div>
+                        <span class="status-badge inactive">Inactive</span>
+                    </div>
+                    <div class="user-item">
+                        <div class="user-avatar small">LD</div>
+                        <div class="user-details">
+                            <strong>Bilal Jutt</strong><br>
+                            <span>jutt@gmail.com</span>
+                        </div>
+                        <div class="user-role">Developer</div>
+                        <div class="user-last">30 min ago</div>
+                        <span class="status-badge active">Active</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="role-permissions">
+                <div class="section-header">
+                    <h2 class="card-title">Role Permissions</h2>
+                    <button class="btn-secondary">+ New Role</button>
+                </div>
+                <div class="role-list">
+                    <div class="role-item">
+                        <div class="role-icon">🛡️</div>
+                        <div class="role-info">
+                            <strong>Super Admin</strong>
+                            <span>2 users</span>
+                        </div>
+                        <div class="permissions">
+                            <span>All Access</span>
+                            <span>User Management</span>
+                            <span>System Config</span>
+                            <span>Billing</span>
+                        </div>
+                    </div>
+                    <div class="role-item">
+                        <div class="role-icon">👔</div>
+                        <div class="role-info">
+                            <strong>Manager</strong>
+                            <span>5 users</span>
+                        </div>
+                        <div class="permissions">
+                            <span>View All</span>
+                            <a href="customer.html" style="text-decoration: none;"><span>Edit Customers</span></a>
+                           <a href="reports.html" style="text-decoration: none;"><span>Reports</span></a>
+                            <span>Team Management</span>
+                        </div>
+                    </div>
+                    <div class="role-item">
+                        <div class="role-icon">📊</div>
+                        <div class="role-info">
+                            <strong>Analyst</strong>
+                            <span>12 users</span>
+                        </div>
+                        <div class="permissions">
+                            <a href="dashboard.html" style="text-decoration: none;"><span>View Dashboard</span></a>
+                            <span>Export Data</span>
+                           <a href="reports.html" style="text-decoration: none;"><span>Create Reports</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+     <script>
+        // Settings tabs switching
+        document.querySelectorAll('.settings-tabs .tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('.settings-tabs .tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+                
+                tab.classList.add('active');
+                document.getElementById(tab.dataset.content).classList.add('active');
+            });
+        });
+
+        // Optional: Keep active state on sidebar if you reload the same page
+        // (not needed for navigation to other pages)
+    </script>
+</body>
+</html>

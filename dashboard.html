@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChurnGuard - Detect & Retain Customer Churn</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <div>
+            <div class="logo">ChurnGuard</div>
+
+            <div class="menu-section">
+                <div class="menu-title">MAIN MENU</div>
+                <div class="menu-item active">
+                    📊 Dashboard
+                </div>
+                <a href="customer.html" >
+                    <div class="menu-item">
+                        👥 Customers
+                    </div>
+                </a>    
+                
+               <a href="reports.html"><div class="menu-item">📄 Reports</div></a>
+              <a href="analytics.html"> <div class="menu-item">
+                    📈 Analytics
+                </div></a> 
+            </div>
+
+            <div class="menu-section">
+               <div class="menu-title">ADMINISTRATION</div></a>
+                <a href="settings.html"><div class="menu-item">⚙️ Settings</div></a>
+                <div class="menu-item">
+                <a href="admin_panel.html"><span>🔒</span> Admin Panel</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="user-section">
+            <div class="user-avatar">AD</div>
+            <div class="user-info">
+                <div class="user-name">Admin User</div>
+                <div class="user-email">admin@bank.com</div>
+            </div>
+            <a href="index.html"><div class="logout">Logout ➜</div></a>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <div class="header">
+            <div>
+                <div class="title">Dashboard</div>
+                <div class="subtitle">Real-time customer churn intelligence and insights</div>
+            </div>
+            <div class="status">
+                <div class="system-health">System Healthy</div>
+                <div class="last-updated">Last updated: 2 min ago</div>
+            </div>
+        </div>
+
+        <div class="cards-grid">
+            <div class="card">
+                <div class="card-title">Total Customers</div>
+                <div class="card-value">12,847</div>
+                <div class="card-change positive">+12% from last month</div>
+            </div>
+            <div class="card">
+                <div class="card-title">At Risk</div>
+                <div class="card-value">1,234</div>
+                <div class="card-change negative">-8% from last month</div>
+            </div>
+            <div class="card">
+                <div class="card-title">Churned (MTD)</div>
+                <div class="card-value">89</div>
+                <div class="card-change negative">-23% vs target</div>
+            </div>
+            <div class="card">
+                <div class="card-title">Revenue at Risk</div>
+                <div class="card-value">$2.4M</div>
+                <div class="card-change negative">-15% from last month</div>
+            </div>
+            <div class="card">
+                <div class="card-title">Save Rate</div>
+                <div class="card-value">73.2%</div>
+                <div class="card-change positive">+5.4% this quarter</div>
+            </div>
+            <div class="card">
+                <div class="card-title">NPS Score</div>
+                <div class="card-value">67</div>
+                <div class="card-change positive">+8 from last month</div>
+            </div>
+        </div>
+
+        <div class="charts-grid">
+            <div class="chart-container">
+                <div class="chart-title">Churn Trends</div>
+                <canvas id="churnTrendsChart"></canvas>
+            </div>
+
+            <div class="chart-container">
+                <div class="chart-title">Risk Distribution</div>
+                <canvas id="riskDistributionChart"></canvas>
+            </div>
+        </div>
+
+        <div class="segment-grid">
+            <div class="chart-container">
+                <div class="chart-title">Churn by Segment</div>
+                <div class="subtitle" style="color:#94a3b8; margin-bottom:20px;">Customer segmentation analysis</div>
+                <div class="bar-chart">
+                    <div class="bar-item">
+                        <div class="bar-label">Premium</div>
+                        <div class="bar"><div class="bar-fill premium"></div></div>
+                    </div>
+                    <div class="bar-item">
+                        <div class="bar-label">Business</div>
+                        <div class="bar"><div class="bar-fill business"></div></div>
+                    </div>
+                    <div class="bar-item">
+                        <div class="bar-label">Personal</div>
+                        <div class="bar"><div class="bar-fill personal"></div></div>
+                    </div>
+                    <div class="bar-item">
+                        <div class="bar-label">Student</div>
+                        <div class="bar"><div class="bar-fill student"></div></div>
+                    </div>
+                    <div class="bar-item">
+                        <div class="bar-label">Senior</div>
+                        <div class="bar"><div class="bar-fill senior"></div></div>
+                    </div>
+                </div>
+                <div class="segment-values">
+                    <div class="segment-value">Premium<br><strong>2,450</strong><br>$4.2M</div>
+                    <div class="segment-value">Business<br><strong>3,820</strong><br>$6.8M</div>
+                    <div class="segment-value">Personal<br><strong>4,210</strong><br>$2.1M</div>
+                    <div class="segment-value">Student<br><strong>1,890</strong><br>$0.4M</div>
+                    <div class="segment-value">Senior<br><strong>1,520</strong><br>$1.8M</div>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <div class="chart-title">Top Churn Reasons</div>
+                <div class="subtitle" style="color:#94a3b8; margin-bottom:20px;">Based on exit survey analysis</div>
+                <div class="reasons-list">
+                    <div class="reason-item">
+                        <span>💳</span> High Service Fees
+                        <div class="reason-bar"><div class="reason-fill high-fees"></div></div>
+                        <div class="reason-percentage">34% (418)</div>
+                    </div>
+                    <div class="reason-item">
+                        <span>🎧</span> Poor Customer Support
+                        <div class="reason-bar"><div class="reason-fill support"></div></div>
+                        <div class="reason-percentage">24% (296)</div>
+                    </div>
+                    <div class="reason-item">
+                        <span>%</span> Better Competitor Rates
+                        <div class="reason-bar"><div class="reason-fill competitor"></div></div>
+                        <div class="reason-percentage">18% (222)</div>
+                    </div>
+                    <div class="reason-item">
+                        <span>📱</span> Slow Digital Services
+                        <div class="reason-bar"><div class="reason-fill digital"></div></div>
+                        <div class="reason-percentage">12% (148)</div>
+                    </div>
+                    <div class="reason-item">
+                        <span>🏦</span> Branch Accessibility
+                        <div class="reason-bar"><div class="reason-fill branch"></div></div>
+                        <div class="reason-percentage">8% (99)</div>
+                    </div>
+                    <div class="reason-item">
+                        <span>⏱️</span> Transaction Delays
+                        <div class="reason-bar"><div class="reason-fill delays"></div></div>
+                        <div class="reason-percentage">4% (49)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Churn Trends - Multi-line chart with area fill
+        const ctxTrends = document.getElementById('churnTrendsChart').getContext('2d');
+        new Chart(ctxTrends, {
+            type: 'line',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug'],
+                datasets: [
+                    {
+                        label: 'Retained',
+                        data: [2450, 2420, 2380, 2320, 2280, 2220, 2250, 2320],
+                        borderColor: '#22d3ee',
+                        backgroundColor: 'rgba(34, 211, 238, 0.15)',
+                        fill: true,
+                        tension: 0.4,
+                        borderWidth: 3,
+                        pointRadius: 6,
+                        pointBackgroundColor: '#22d3ee',
+                        pointBorderColor: '#0f172a',
+                        pointBorderWidth: 3
+                    },
+                    {
+                        label: 'At Risk',
+                        data: [160, 190, 230, 260, 290, 320, 300, 270],
+                        borderColor: '#fbbf24',
+                        backgroundColor: 'transparent',
+                        tension: 0.4,
+                        borderWidth: 2,
+                        pointRadius: 4,
+                        pointBackgroundColor: '#fbbf24'
+                    },
+                    {
+                        label: 'Churned',
+                        data: [85, 95, 105, 115, 125, 135, 125, 115],
+                        borderColor: '#f87171',
+                        backgroundColor: 'transparent',
+                        tension: 0.4,
+                        borderWidth: 2,
+                        pointRadius: 4,
+                        pointBackgroundColor: '#f87171'
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: { color: 'black', padding: 20 }
+                    }
+                },
+                scales: {
+                    x: { grid: { display: false }, ticks: { color: '#94a3b8' } },
+                    y: { grid: { color: '#334155' }, ticks: { color: '#94a3b8' } }
+                }
+            }
+        });
+
+        // Risk Distribution - Clean donut chart (no center text)
+        const ctxRisk = document.getElementById('riskDistributionChart').getContext('2d');
+        new Chart(ctxRisk, {
+            type: 'doughnut',
+            data: {
+                labels: ['Low Risk', 'Medium Risk', 'High Risk'],
+                datasets: [{
+                    data: [65, 25, 10],
+                    backgroundColor: ['#22d3ee', '#fbbf24', '#f87171'],
+                    borderWidth: 0,
+                    hoverOffset: 10
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: { color: 'black', padding: 20 }
+                    }
+                },
+                cutout: '70%'
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChurnGuard - Settings</title>
+    <link rel="stylesheet" href="settings.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <div>
+            <div class="logo">
+                <span></span>ChurnGuard
+            </div>
+
+            <div class="menu-title">MAIN MENU</div>
+            <a href="dashboard.html" class="menu-item" data-tab="dashboard"><span class="icon">📊</span> Dashboard</a>
+            <a href="customer.html" class="menu-item" data-tab="customers"><span class="icon">👥</span> Customers</a>
+            <a href="reports.html" class="menu-item" data-tab="reports"><span class="icon">📄</span> Reports</a>
+            <a href="analytics.html" class="menu-item" data-tab="analytics"><span class="icon">📈</span> Analytics</a>
+
+            <div class="menu-title">ADMINISTRATION</div>
+            <a href="settings.html" class="menu-item active" data-tab="settings"><span class="icon">⚙️</span> Settings</a>
+
+             <a href="admin_panel.html" class="menu-item" data-tab="analytics"><span class="icon">🔒</span>  Admin Panel</a>
+        </div>
+
+        <div class="user-section">
+            <div class="user-avatar">AD</div>
+            <div class="user-info">
+                <div class="user-name">Admin User</div>
+                <div class="user-email">admin@bank.com</div>
+            </div>
+            <a href ="index.html"> <div class="logout">Logout ➜</div></a>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <h1 class="section-title">Settings</h1>
+        <p class="subtitle">Manage your account and application preferences</p>
+
+        <div class="settings-tabs">
+            <button class="tab active" data-content="profile">Profile</button>
+            <button class="tab" data-content="notifications">Notifications</button>
+            <button class="tab" data-content="security">Security</button>
+            <button class="tab" data-content="preferences">Preferences</button>
+            <button class="tab" data-content="billing">Billing</button>
+        </div>
+
+        <!-- Profile Tab -->
+        <div id="profile" class="tab-content active">
+            <div class="settings-card">
+                <h2 class="card-title">Profile Information</h2>
+                <div class="profile-section">
+                    <div class="avatar-section">
+                        <div class="current-avatar">AD</div>
+                        <div class="avatar-actions">
+                            <button class="btn-secondary">Change Avatar</button>
+                            <p class="avatar-hint">JPG, PNG or GIF. Max 2MB</p>
+                        </div>
+                    </div>
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label>First Name</label>
+                            <input type="text" value="Admin" class="input-field">
+                        </div>
+                        <div class="form-group">
+                            <label>Last Name</label>
+                            <input type="text" value="User" class="input-field">
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" value="admin@bank.com" class="input-field">
+                        </div>
+                        <div class="form-group">
+                            <label>Phone</label>
+                            <input type="tel" value="+1 (555) 123-4567" class="input-field">
+                        </div>
+                        <div class="form-group full-width">
+                            <label>Job Title</label>
+                            <input type="text" value="System Administrator" class="input-field">
+                        </div>
+                        <div class="form-group full-width">
+                            <label>Department</label>
+                            <select class="input-field">
+                                <option>Risk & Analytics</option>
+                                <option>Customer Success</option>
+                                <option>IT Security</option>
+                                <option>Executive</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="actions-right">
+                    <button class="btn-primary">Save Changes</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Notifications Tab -->
+        <div id="notifications" class="tab-content">
+            <div class="settings-card">
+                <h2 class="card-title">Notification Preferences</h2>
+                <div class="notification-section">
+                    <div class="toggle-item">
+                        <div>
+                            <strong>Email Notifications</strong>
+                            <p>Receive churn alerts, weekly reports, and system updates via email</p>
+                        </div>
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="toggle-item">
+                        <div>
+                            <strong>Push Notifications</strong>
+                            <p>Get real-time alerts in the app for high-risk churn predictions</p>
+                        </div>
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="toggle-item">
+                        <div>
+                            <strong>SMS Alerts</strong>
+                            <p>Critical alerts sent to your phone (e.g., data sync failures)</p>
+                        </div>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="toggle-item">
+                        <div>
+                            <strong>Daily Summary</strong>
+                            <p>End-of-day summary of churn metrics and predictions</p>
+                        </div>
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="settings-card">
+                <h2 class="card-title">Notification Frequency</h2>
+                <div class="form-grid">
+                    <div class="form-group full-width">
+                        <label>Churn Alert Threshold</label>
+                        <select class="input-field">
+                            <option>Notify on any churn risk > 3%</option>
+                            <option>Notify on churn risk > 5%</option>
+                            <option>Notify on churn risk > 10%</option>
+                            <option>Only critical (>15%)</option>
+                        </select>
+                    </div>
+                    <div class="form-group full-width">
+                        <label>Report Schedule</label>
+                        <select class="input-field">
+                            <option>Weekly (Monday morning)</option>
+                            <option>Bi-weekly</option>
+                            <option>Monthly</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Security Tab -->
+        <div id="security" class="tab-content">
+            <div class="settings-card">
+                <h2 class="card-title">Security Settings</h2>
+                <div class="toggle-section">
+                    <div class="toggle-item">
+                        <div>
+                            <strong>Two-Factor Authentication</strong>
+                            <p>Extra layer of security for your account</p>
+                        </div>
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="toggle-item">
+                        <div>
+                            <strong>Session Timeout</strong>
+                            <p>Automatically log out after inactivity</p>
+                        </div>
+                        <select class="input-field small-select">
+                            <option>30 minutes</option>
+                            <option>1 hour</option>
+                            <option>2 hours</option>
+                            <option>Never</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="actions-right">
+                    <button class="btn-secondary">Change Password</button>
+                    <button class="btn-secondary">View Login History</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Preferences Tab -->
+        <div id="preferences" class="tab-content">
+            <div class="settings-card">
+                <h2 class="card-title">Application Preferences</h2>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label>Language</label>
+                        <select class="input-field">
+                            <option>English (US)</option>
+                            <option>English (UK)</option>
+                            <option>Spanish</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Timezone</label>
+                        <select class="input-field">
+                            <option>UTC-05:00 Eastern Time</option>
+                            <option>UTC-08:00 Pacific Time</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Date Format</label>
+                        <select class="input-field">
+                            <option>MM/DD/YYYY</option>
+                            <option>DD/MM/YYYY</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Currency</label>
+                        <select class="input-field">
+                            <option>USD ($)</option>
+                            <option>EUR (€)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Billing Tab -->
+        <div id="billing" class="tab-content">
+            <div class="settings-card">
+                <h2 class="card-title">Billing Information</h2>
+                <div class="form-grid">
+                    <div class="form-group full-width">
+                        <label>Plan</label>
+                        <input type="text" value="Enterprise Plan" class="input-field" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label>Billing Cycle</label>
+                        <input type="text" value="Annual" class="input-field" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label>Next Billing Date</label>
+                        <input type="text" value="January 15, 2026" class="input-field" readonly>
+                    </div>
+                </div>
+                <div class="actions-right">
+                    <button class="btn-secondary">View Invoice History</button>
+                    <button class="btn-primary">Update Payment Method</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Settings tabs switching
+        document.querySelectorAll('.settings-tabs .tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('.settings-tabs .tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+                
+                tab.classList.add('active');
+                document.getElementById(tab.dataset.content).classList.add('active');
+            });
+        });
+
+        // Optional: Keep active state on sidebar if you reload the same page
+        // (not needed for navigation to other pages)
+    </script>
+</body>
+</html>

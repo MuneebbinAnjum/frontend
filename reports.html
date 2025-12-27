@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChurnGuard - Detect & Retain Customer Churn</title>
+    <link rel="stylesheet" href="reports.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <div>
+            <div class="logo">
+                <span></span> ChurnGuard
+            </div>
+
+            <div class="menu-title">MAIN MENU</div>
+            <a href="dashboard.html" class="menu-item"><span class="icon">📊</span> Dashboard</a>
+            <a href="customer.html" class="menu-item"><span class="icon">👥</span> Customers</a>
+            <a href="reports.html" class="menu-item active"><span class="icon">📄</span> Reports</a>
+            <a href="analytics.html" class="menu-item"><span class="icon">📈</span> Analytics</a>
+
+            <div class="menu-title">ADMINISTRATION</div>
+            <a href="settings.html" class="menu-item"><span class="icon">⚙️</span> Settings</a>
+            <a href="admin_panel.html" class="menu-item"><span class="icon">🔒</span> Admin Panel</a>
+        </div>
+
+        <div class="user-section">
+            <div class="user-avatar">AD</div>
+            <div class="user-info">
+                <div class="user-name">Admin User</div>
+                <div class="user-email">admin@bank.com</div>
+            </div>
+            <a href="index.html" style="text-decoration: none;"><div class="logout">Logout →</div></a>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <div class="header">
+            <div>
+                <h1 class="section-title">Reports</h1>
+                <p class="subtitle">Generate, schedule and download churn reports</p>
+            </div>
+            <div class="header-actions">
+                <button class="btn-secondary" style="color: white; background-color:#6a5cff;">Schedule</button>
+                <button class="btn-primary">Generate Report</button>
+            </div>
+        </div>
+
+        <!-- Stats Cards -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-title">Reports Generated</div>
+                <div class="stat-value">47</div>
+                <div class="stat-change positive">+12 this month</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-title">Downloads</div>
+                <div class="stat-value">156</div>
+                <div class="stat-change positive">+34 this month</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-title">Avg. Generation Time</div>
+                <div class="stat-value">2.3s</div>
+                <div class="stat-change positive">-0.5s this month</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-title">Shared Reports</div>
+                <div class="stat-value">23</div>
+                <div class="stat-change positive">+8 this month</div>
+            </div>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="search-bar">
+            <input type="text" placeholder="Search reports..." class="search-input">
+            <button class="filter-btn">Type</button>
+            <button class="filter-btn">Starred</button>
+        </div>
+
+        <!-- Reports Layout -->
+        <div class="reports-layout">
+            <div class="reports-list">
+                <div class="report-item">
+                    <div class="report-info">
+                        <h3>Monthly Churn Analysis <span class="star">⭐</span></h3>
+                        <p>Comprehensive churn breakdown for the current month</p>
+                        <span class="tag">Analytics</span>
+                    </div>
+                    <button class="download-btn">Download</button>
+                </div>
+
+                <div class="report-item">
+                    <div class="report-info">
+                        <h3>Customer Segmentation Report</h3>
+                        <p>Risk-based customer groups and retention strategies</p>
+                        <span class="tag">Segmentation</span>
+                    </div>
+                    <button class="download-btn">Download</button>
+                </div>
+
+                <div class="report-item">
+                    <div class="report-info">
+                        <h3>Regional Performance Overview</h3>
+                        <p>Churn rates and revenue impact by geographic region</p>
+                        <span class="tag">Regional</span>
+                    </div>
+                    <button class="download-btn">Download</button>
+                </div>
+
+                <div class="report-item">
+                    <div class="report-info">
+                        <h3>Product-Wise Churn Trends</h3>
+                        <p>Analysis of churn across different product lines</p>
+                        <span class="tag">Product</span>
+                    </div>
+                    <button class="download-btn">Download</button>
+                </div>
+            </div>
+
+            <div class="scheduled-box">
+                <h2 class="card-title">Scheduled Reports</h2>
+                <div class="schedule-list">
+                    <div class="schedule-item">
+                        <strong>Weekly Summary</strong><br>
+                        <span class="status active">Active</span>
+                    </div>
+                    <div class="schedule-item">
+                        <strong>Monthly Deep Dive</strong><br>
+                        <span class="status active">Active</span>
+                    </div>
+                    <div class="schedule-item">
+                        <strong>Daily High-Risk Alerts</strong><br>
+                        <span class="status paused">Paused</span>
+                    </div>
+                    <div class="schedule-item">
+                        <strong>Quarterly Executive Report</strong><br>
+                        <span class="status active">Active</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

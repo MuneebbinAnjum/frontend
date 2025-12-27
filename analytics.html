@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChurnGuard - Analytics</title>
+  <link rel="stylesheet" href="analytics.css">
+</head>
+<body>
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div>
+      <div class="logo">ChurnGuard</div>
+
+      <div class="menu-section">
+        <div class="menu-title">Main Menu</div>
+        <a href="dashboard.html"><div class="menu-item">📊 Dashboard</div></a> 
+        <a href="customer.html"><div class="menu-item">👥 Customers</div></a>  <!-- Removed 'active' and 'customer_btn' -->
+        <a href="reports.html"><div class="menu-item">📄 Reports</div></a>
+        <a href="analytics.html"><div class="menu-item active">📈 Analytics</div></a>  <!-- Added 'active' here -->
+      </div>
+
+      <div class="menu-section">
+        
+        <div class="menu-title">Administration</div>
+        <a href="settings.html"><div class="menu-item">⚙️ Settings</div></a>
+        <a href="admin_panel.html"><div class="menu-item">🔒 Admin Panel</div></a>
+      </div>
+    </div>
+
+    <div class="user-section">
+      <div class="user-avatar">AD</div>
+      <div class="user-info">
+        <div class="user-name">Admin User</div>
+        <div class="user-email">admin@bank.com</div>
+      </div>
+      <a href="index.html" ><div class="logout">Logout ➜</div></a>
+    </div>
+  </aside>
+
+  <div class="main-content">
+    <!-- Regional Performance -->
+    <div class="section">
+      <h2 class="section-title">Regional Performance</h2>
+      <p class="subtitle">Churn analysis by geographic region</p>
+      <div class="regional-grid">
+        <div class="region-card">
+          <div class="region-name">North</div>
+          <div class="churn-rate">3.2%</div>
+          <div class="region-details">Customers <strong>4,500</strong></div>
+          <div class="region-details">Revenue <strong>$2.4M</strong></div>
+          <div class="progress-bar"><div class="progress-fill" style="width: 64%;"></div></div>
+        </div>
+        <div class="region-card">
+          <div class="region-name">South</div>
+          <div class="churn-rate negative">4.1%</div>
+          <div class="region-details">Customers <strong>3,800</strong></div>
+          <div class="region-details">Revenue <strong>$1.9M</strong></div>
+          <div class="progress-bar"><div class="progress-fill" style="width: 82%;"></div></div>
+        </div>
+        <div class="region-card">
+          <div class="region-name">East</div>
+          <div class="churn-rate">2.8%</div>
+          <div class="region-details">Customers <strong>5,200</strong></div>
+          <div class="region-details">Revenue <strong>$3.1M</strong></div>
+          <div class="progress-bar"><div class="progress-fill" style="width: 56%;"></div></div>
+        </div>
+        <div class="region-card">
+          <div class="region-name">West</div>
+          <div class="churn-rate">3.5%</div>
+          <div class="region-details">Customers <strong>4,100</strong></div>
+          <div class="region-details">Revenue <strong>$2.2M</strong></div>
+          <div class="progress-bar"><div class="progress-fill" style="width: 70%;"></div></div>
+        </div>
+        <div class="region-card">
+          <div class="region-name">Central</div>
+          <div class="churn-rate">2.5%</div>
+          <div class="region-details">Customers <strong>3,200</strong></div>
+          <div class="region-details">Revenue <strong>$1.8M</strong></div>
+          <div class="progress-bar"><div class="progress-fill" style="width: 50%;"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Churn by Product & Cohort Retention -->
+    <div class="bottom-grid">
+      <div class="card large">
+        <h3 class="card-title">Churn by Product</h3>
+        <p class="subtitle" style="color: black;">Which products have highest attrition</p>
+        <div class="bar-chart">
+          <div class="bar-item">
+            <span>Savings</span>
+            <div class="bar-container"><div class="bar-fill yellow" style="width: 64%;">3.2%</div></div>
+          </div>
+          <div class="bar-item">
+            <span>Current</span>
+            <div class="bar-container"><div class="bar-fill red" style="width: 96%;">4.8%</div></div>
+          </div>
+          <div class="bar-item">
+            <span>Credit Card</span>
+            <div class="bar-container"><div class="bar-fill red" style="width: 100%;">5.5%</div></div>
+          </div>
+          <div class="bar-item">
+            <span>Loans</span>
+            <div class="bar-container"><div class="bar-fill green" style="width: 42%;">2.1%</div></div>
+          </div>
+          <div class="bar-item">
+            <span>Investment</span>
+            <div class="bar-container"><div class="bar-fill yellow" style="width: 76%;">3.8%</div></div>
+          </div>
+          <div class="bar-item">
+            <span>Insurance</span>
+            <div class="bar-container"><div class="bar-fill yellow" style="width: 84%;">4.2%</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card large">
+        <h3 class="card-title">Cohort Retention</h3>
+        <p class="subtitle" style="color: black;">Retention % over time by signup cohort</p>
+        <div class="cohort-table">
+          <table>
+            <thead>
+              <tr>
+                <th>Cohort</th>
+                <th>M1</th>
+                <th>M2</th>
+                <th>M3</th>
+                <th>M4</th>
+                <th>M5</th>
+                <th>M6</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Q1 2024</td>
+                <td class="ret-100">100%</td>
+                <td class="ret-95">95%</td>
+                <td class="ret-92">92%</td>
+                <td class="ret-89">89%</td>
+                <td class="ret-87">87%</td>
+                <td class="ret-85">85%</td>
+              </tr>
+              <tr>
+                <td>Q2 2024</td>
+                <td class="ret-100">100%</td>
+                <td class="ret-96">96%</td>
+                <td class="ret-93">93%</td>
+                <td class="ret-91">91%</td>
+                <td class="ret-88">88%</td>
+                <td class="ret-86">86%</td>
+              </tr>
+              <tr>
+                <td>Q3 2024</td>
+                <td class="ret-100">100%</td>
+                <td class="ret-97">97%</td>
+                <td class="ret-95">95%</td>
+                <td class="ret-93">93%</td>
+                <td class="ret-91">91%</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>Q4 2024</td>
+                <td class="ret-100">100%</td>
+                <td class="ret-98">98%</td>
+                <td class="ret-96">96%</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

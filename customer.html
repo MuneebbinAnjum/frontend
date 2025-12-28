@@ -15,7 +15,7 @@
 
     <div class="menu-section">
       <div class="menu-title">Main Menu</div>
-     <a href="dashboard.html"><div class="menu-item">📊 Dashboard</div></a> 
+      <a href="dashboard.html"><div class="menu-item">📊 Dashboard</div></a> 
       <div class="menu-item active customer_btn">👥 Customers</div>
       <a href="reports.html"><div class="menu-item">📄 Reports</div></a>
       <a href="analytics.html"><div class="menu-item">📈 Analytics</div></a>
@@ -24,7 +24,7 @@
     <div class="menu-section">
       <br>
       <div class="menu-title">Administration</div>
-       <a href="settings.html"><div class="menu-item">⚙️ Settings</div></a>
+      <a href="settings.html"><div class="menu-item">⚙️ Settings</div></a>
       <a href="admin_panel.html"><div class="menu-item"><span>🔒</span> Admin Panel</div></a>
     </div>
   </div>
@@ -33,9 +33,9 @@
     <div class="user-avatar">AD</div>
     <div class="user-info">
       <div class="user-name">Admin User</div>
-      <div class="user-email" style="color: #94a3b8;">admin@bank.com</div>
+      <div class="user-email">admin@bank.com</div>
     </div>
-    <a href="index.html"><div class="logout" style="color:#94a3b8;">Logout ➜</div></a>
+    <a href="index.html"><div class="logout">Logout ➜</div></a>
   </div>
 </aside>
 
@@ -48,20 +48,20 @@
       <div class="title">Customers</div>
       <div class="subtitle">Manage and analyze customer churn risk</div>
     </div>
+    <a href="#add-customer-modal" class="add-btn">+ Add Customer</a>
   </div>
 
   <!-- STATS -->
   <section class="stats">
-    <div class="stat-card"><span>Total Customers</span><strong>10</strong></div>
-    <div class="stat-card danger"><span>High Risk</span><strong>4</strong></div>
-    <div class="stat-card"><span>Total LTV</span><strong>$410K</strong></div>
+    <div class="stat-card"><span>Total Customers</span><strong>10,000</strong></div>
+    <div class="stat-card danger"><span>High Risk</span><strong>2456</strong></div>
+    <div class="stat-card"><span>Total LTV</span><strong>$410B</strong></div>
     <div class="stat-card"><span>Avg Engagement</span><strong>61%</strong></div>
   </section>
 
-  <!-- CUSTOMERS -->
+  <!-- CUSTOMERS LIST -->
   <section class="customers">
 
-    <!-- Example customer with actions -->
     <div class="customer high">
       <div class="top">
         <div class="left">
@@ -76,7 +76,6 @@
           <button class="btn-delete" title="Delete">🗑️</button>
         </div>
       </div>
-      
       <div class="details">
         <span>Balance: $45,230</span>
         <span>Risk: 87%</span>
@@ -89,7 +88,7 @@
         <div class="left">
           <div class="avatar-circle">MC</div>
           <div>
-            <h3>Michael Chen <span class="risk medium" style="color: white;">Medium</span></h3>
+            <h3>Michael Chen <span class="risk medium">Medium</span></h3>
             <p>m.chen@email.com • +1 555-0124</p>
           </div>
         </div>
@@ -105,7 +104,6 @@
       </div>
     </div>
 
-    <!-- Repeat the same pattern for all customers -->
     <div class="customer high">
       <div class="top">
         <div class="left">
@@ -153,7 +151,7 @@
         <div class="left">
           <div class="avatar-circle">LA</div>
           <div>
-            <h3>Lisa Anderson <span class="risk medium" style="color: white;">Medium</span></h3>
+            <h3>Lisa Anderson <span class="risk medium">Medium</span></h3>
             <p>l.anderson@email.com • +1 555-0127</p>
           </div>
         </div>
@@ -195,7 +193,7 @@
         <div class="left">
           <div class="avatar-circle">AR</div>
           <div>
-            <h3>Ahmed Raza <span class="risk medium" style="color: white;">Medium</span></h3>
+            <h3>Ahmed Raza <span class="risk medium">Medium</span></h3>
             <p>a.raza@bank.com</p>
           </div>
         </div>
@@ -258,7 +256,7 @@
         <div class="left">
           <div class="avatar-circle">NK</div>
           <div>
-            <h3>Noor Kamal <span class="risk medium" style="color: white;">Medium</span></h3>
+            <h3>Noor Kamal <span class="risk medium">Medium</span></h3>
             <p>n.kamal@bank.com</p>
           </div>
         </div>
@@ -298,5 +296,85 @@
   </section>
 
 </main>
+
+<!-- ADD CUSTOMER MODAL -->
+<div id="add-customer-modal" class="modal-overlay">
+  <div class="modal-content">
+    <a href="#" class="modal-close">×</a>
+    <h2 class="modal-title">Add New Customer</h2>
+    <p class="modal-subtitle">Enter customer details to detect churn risk</p>
+
+    <form>
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Full Name</label>
+          <input type="text" placeholder="e.g. Muneeb Anjum" required />
+        </div>
+        <div class="form-group">
+          <label>Age</label>
+          <input type="number" min="18" max="100" placeholder="22" required />
+        </div>
+        <div class="form-group">
+          <label>Location</label>
+          <input type="text" placeholder="e.g. Lahore, Pakistan" required />
+        </div>
+        <div class="form-group">
+          <label>Tenure (years)</label>
+          <input type="number" min="0" placeholder="4" required />
+        </div>
+        <div class="form-group">
+          <label>Credit Score</label>
+          <input type="number" min="300" max="850" placeholder="720" required />
+        </div>
+        <div class="form-group">
+          <label>Number of Products</label>
+          <input type="number" min="1" max="10" placeholder="3" required />
+        </div>
+
+        <div class="form-group full">
+          <label>Active Member?</label>
+          <div class="toggle-group">
+            <span>No</span>
+            <label class="toggle-switch">
+              <input type="checkbox" checked />
+              <span class="slider"></span>
+            </label>
+            <span>Yes</span>
+          </div>
+        </div>
+
+        <div class="form-group full">
+          <label>Card Type</label>
+          <div class="radio-group">
+            <label class="radio-item">
+              <input type="radio" name="card" value="silver" checked />
+              Silver
+            </label>
+            <label class="radio-item">
+              <input type="radio" name="card" value="gold" />
+              Gold
+            </label>
+            <label class="radio-item">
+              <input type="radio" name="card" value="platinum" />
+              Platinum
+            </label>
+            <label class="radio-item">
+              <input type="radio" name="card" value="diamond" />
+              Diamond
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <button type="submit" class="submit-btn">Detect Churn Risk</button>
+
+      <div class="risk-result">
+        Mock Churn Risk: <strong style="color: #dc2626;">87%</strong> (High Risk)<br>
+        <small>* This is a simulated prediction. Real model would calculate dynamically.</small>
+      </div>
+    </form>
+  </div>
+</div>
+
 </body>
 </html>
